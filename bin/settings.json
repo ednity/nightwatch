@@ -1,16 +1,16 @@
 {
-  "src_folders" : ["./examples/tests"],
-  "output_folder" : "./examples/reports",
+  "src_folders" : ["./ednity/tests"],
+  "output_folder" : "./ednity/reports",
   "custom_commands_path" : "",
-  
+
   "selenium" : {
     "start_process" : false,
     "server_path" : "",
     "log_path" : "",
     "host" : "127.0.0.1",
-    "port" : 4444  
+    "port" : 4444
   },
-  
+
   "test_settings" : {
     "default" : {
       "launch_url" : "http://localhost",
@@ -30,7 +30,7 @@
         "acceptSslCerts" : true
       }
     },
-    
+
     "saucelabs" : {
       "selenium_host" : "ondemand.saucelabs.com",
       "selenium_port" : 80,
