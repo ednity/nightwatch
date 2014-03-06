@@ -21,7 +21,6 @@ module.exports = {
   },
   'Comment' : function (client) {
     client
-      .assert.title('ednity')
       .waitForElementVisible('#main .comment-form', 10000)
       .setValue('#main .comment-form', 'test comment')
       .waitForElementVisible('#main .comment-btn', 10000)
@@ -29,9 +28,8 @@ module.exports = {
   },
   'Post' : function (client) {
     client
-      .assert.title('ednity')
-      .waitForElementVisible('.textarea-wrap textarea', 10000)
-      .setValue('.textarea-wrap textarea', 'test post')
+      .waitForElementVisible('.post-textarea-wrap textarea', 10000)
+      .setValue('.post-textarea-wrap textarea', 'test post')
       .click('#main .post-button')
       .end()
   }
