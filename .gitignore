@@ -1,5 +1,8 @@
-/.project
+.project
 *.DS_Store
+*.idea
+nightwatch.json
 node_modules
 reports
 npm-debug.log
+selenium-debug.log
