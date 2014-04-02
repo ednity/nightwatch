@@ -23,6 +23,7 @@ module.exports = {
     client
       .waitForElementVisible('#main .comment-form', 10000)
       .setValue('#main .comment-form', 'test comment')
+      .click('#main .comment-form')
       .waitForElementVisible('#main .comment-btn', 10000)
       .click('#main .comment-btn')
   },
@@ -31,6 +32,11 @@ module.exports = {
       .waitForElementVisible('.post-textarea-wrap textarea', 10000)
       .setValue('.post-textarea-wrap textarea', 'test post')
       .click('#main .post-button')
+  },
+  'Notification' : function (client) {
+    client
+      .click('#notification-icon')
+      .waitForElementVisible('.notification-balloon div', 10000)
       .end()
   }
 }
