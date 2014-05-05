@@ -2,13 +2,17 @@
 module.exports = {
   setUp : function() {
     console.log("test start");
+    console.log(process.env.TARGET_URL);
+    if (typeof(process.env.TARGET_URL) == 'undefined') {
+      console.log("TARGET_URLが定義されていません");
+    }
   },
   tearDown : function() {
     console.log("test end");
   },
   'Login' : function(client) {
     client
-      .url("http://www.ednity.com")
+      .url(process.env.TARGET_URL)
       .assert.title('ednity（エドニティ）｜生徒の可能性を引き出す学校向けSNS')
       .waitForElementVisible('#login-btn', 1000)
       .click('#login-btn')
@@ -30,5 +34,6 @@ module.exports = {
       .waitForElementVisible('.post-textarea-wrap textarea', 10000)
       .setValue('.post-textarea-wrap textarea', 'test post')
       .click('#main .post-button')
+      .end();
   }
 }
