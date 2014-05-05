@@ -10,7 +10,7 @@ module.exports = {
   'Login Test' : function (client) {
     client
       .url("http://www.ednity.com")
-      .assert.title('ednity')
+      .assert.title('ednity（エドニティ）｜生徒の可能性を引き出す学校向けSNS')
       .waitForElementVisible('.main-sign-up-btn', 1000)
       .click('.main-sign-up-btn')
       .waitForElementVisible('#signup_teacher_form', 2000)
